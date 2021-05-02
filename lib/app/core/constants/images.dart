@@ -1,18 +1,14 @@
 //--------------------------------------------------------------------//
-//------------------------------Images--------------------------------//
+//------------------------------Images---------------------------------//
 //--------------------------------------------------------------------//
 
 class AppImages {
-  static const String arquiteturaLimpa =
-      'assets/img/books/arquitetura_limpa.png';
+  static const String arquiteturaLimpa = 'assets/img/books/arquitetura_limpa.png';
   static const String codigoLimpo = 'assets/img/books/codigo_limpo.png';
   static const String dart = 'assets/img/books/dart.png';
-  static const String flutterForDummies =
-      'assets/img/books/flutter_for_dummies.png';
-  static const String flutterFramework =
-      'assets/img/books/flutter_framework.png';
-  static const String flutterNaPratica =
-      'assets/img/books/flutter_na_pratica.png';
+  static const String flutterForDummies = 'assets/img/books/flutter_for_dummies.png';
+  static const String flutterFramework = 'assets/img/books/flutter_framework.png';
+  static const String flutterNaPratica = 'assets/img/books/flutter_na_pratica.png';
   static const String flutterProjects = 'assets/img/books/flutter_projects.png';
   static const String logo = 'assets/img/logo/logo.png';
   static const String logoWhite = 'assets/img/logo/logo_white.png';

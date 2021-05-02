@@ -17,5 +17,6 @@ class AppColors {
   static const Color progressBar = secondary;
   static const Color progressBarDone = accent;
   static const Color selectedTabBar = Color(0xff64666B);
+  static const Color playlistCard = Color(0xff262626);
   static const Color unselectedTabBar = cardBackground;
 }

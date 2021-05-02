@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flutter_triple/flutter_triple.dart';
-
-import 'home_store.dart';
+import 'package:flutterando_class/app/modules/home/widgets/books_widget.dart';
+import 'package:flutterando_class/app/modules/home/widgets/keep_watching_widget.dart';
+import 'package:flutterando_class/app/modules/home/widgets/playlists_widget.dart';
+import 'package:flutterando_class/app/modules/home/widgets/recomended_videos_widget.dart';
+import 'package:flutterando_class/app/modules/home/widgets/top_card_widget.dart';
+import 'package:flutterando_class/app/modules/home/widgets/trilhas_widget.dart';
 
 class HomePage extends StatefulWidget {
   final String title;
@@ -13,37 +15,33 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends ModularState<HomePage, HomeStore> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Counter'),
-      ),
-      body: ScopedBuilder<HomeStore, Exception, int>(
-        store: controller,
-        onState: (_, counter) {
-          return Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Text('$counter'),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            TopCardWidget(),
+            SizedBox(height: 15),
+            Padding(
+              padding: const EdgeInsets.only(left: 32, right: 13, bottom: 18),
+              child: Column(
+                children: [
+                  KeepWatchingWidget(),
+                  RecomendedVideosWidget(),
+                  SizedBox(height: 27),
+                  PlaylistsWidget(),
+                  SizedBox(height: 27),
+                  BooksWidget(),
+                  SizedBox(height: 40),
+                  TrilhasWidget(),
+                ],
               ),
-            ],
-          );
-        },
-        onError: (context, error) => Center(
-          child: Text(
-            'Too many clicks',
-            style: TextStyle(color: Colors.red),
-          ),
+            ),
+          ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          controller.increment();
-        },
-        child: Icon(Icons.add),
       ),
     );
   }

@@ -6,8 +6,8 @@ import 'flutterando_theme.dart';
 class ThemeApp {
   ThemeData theme() {
     return ThemeData(
-      canvasColor: Colors.transparent,
       primaryColor: AppColors.primary,
+      canvasColor: Colors.transparent,
       accentColor: AppColors.accent,
       backgroundColor: AppColors.primary,
       scaffoldBackgroundColor: AppColors.primary,
@@ -29,8 +29,8 @@ class ThemeApp {
           color: AppColors.accent,
         ),
         unselectedIconTheme: IconThemeData(
-          // color: AppColors.unselectedIcon,
-        ),
+            // color: AppColors.unselectedIcon,
+            ),
         type: BottomNavigationBarType.fixed,
       ),
       snackBarTheme: SnackBarThemeData(
